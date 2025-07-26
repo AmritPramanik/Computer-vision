@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b3de519-077c-40ba-9cb5-39e95d31a5a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project0-sample/demo2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project0-sample/demo3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/sample.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1- car counting system/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project1- car counting system/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/project0-sample/demo1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +30,18 @@
   "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="30NkL9mmSECOa1JMcCm7JLBvizE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.demo1.executor": "Run",
+    "Python.demo2.executor": "Run",
+    "Python.demo3.executor": "Run",
     "Python.main.executor": "Run",
     "Python.sample.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -43,6 +51,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Computer-vision\project0-sample" />
+      <recent name="D:\Computer-vision\project 0 - sample " />
       <recent name="D:\Computer-vision\Yolo-Weights" />
     </key>
   </component>
