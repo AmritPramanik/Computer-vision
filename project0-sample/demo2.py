@@ -1,8 +1,8 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO("../Yolo-Weights/yolov8l.pt")
-cap = cv2.VideoCapture(0)
+model = YOLO("../Yolo-Weights/yolov8l.pt").to('cuda')
+cap = cv2.VideoCapture('../videos/cars.mp4')
 
 while True:
     ret,frame = cap.read()

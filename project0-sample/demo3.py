@@ -20,7 +20,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 model = YOLO("../Yolo-Weights/yolov8l.pt").to(device)
 print("YOLO is running on:", model.device)
-cap = cv2.VideoCapture("../videos/bikes.mp4")
+cap = cv2.VideoCapture("../videos/cars.mp4")
 
 while True:
     ret,frame = cap.read()
@@ -38,14 +38,14 @@ while True:
             # cv2.rectangle(frame,pt1=(x1,y1),pt2=(x2,y2),color=(0,255,0),thickness=2)
             # It is for Cvzone
             w,h= x2-x1, y2 -y1
-            cvzone.cornerRect(frame,(x1,y1,w,h))
+            cvzone.cornerRect(frame,(x1,y1,w,h),l=9)
 
             # for confident
             conf = math.ceil((box.conf[0]*100))/100
 
             # class name
             cls = int(box.cls[0])
-            cvzone.putTextRect(frame,f'{classNames[cls]} {conf}',(max(0,x1),max(35,y1-20)),scale=1,thickness=1)
+            cvzone.putTextRect(frame,f'{classNames[cls]} {conf}',(max(0,x1),max(35,y1-20)),scale=1,thickness=1,offset=3)
 
     # new_frame = cv2.flip(frame,1)
     cv2.imshow('YOLO V8', frame)
