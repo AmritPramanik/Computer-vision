@@ -1,5 +1,5 @@
 # object detection manually by custom data
-
+import torch
 import cv2
 import cvzone
 from ultralytics import YOLO
@@ -16,11 +16,11 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
               "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors",
               "teddy bear", "hair drier", "toothbrush"
               ]
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-model = YOLO("../Yolo-Weights/yolov8n.pt")
-cap = cv2.VideoCapture(0)
-cap.set(3,980)
-cap.set(4,550)
+model = YOLO("../Yolo-Weights/yolov8l.pt").to(device)
+print("YOLO is running on:", model.device)
+cap = cv2.VideoCapture("../videos/bikes.mp4")
 
 while True:
     ret,frame = cap.read()
@@ -47,7 +47,9 @@ while True:
             cls = int(box.cls[0])
             cvzone.putTextRect(frame,f'{classNames[cls]} {conf}',(max(0,x1),max(35,y1-20)),scale=1,thickness=1)
 
+    # new_frame = cv2.flip(frame,1)
     cv2.imshow('YOLO V8', frame)
     if cv2.waitKey(1) == ord('x'):
         break
+
 cv2.destroyAllWindows()

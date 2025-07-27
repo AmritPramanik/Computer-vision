@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b3de519-077c-40ba-9cb5-39e95d31a5a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project0-sample/demo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/project0-sample/demo3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project1- car counting system/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project1- car counting system/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,24 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.demo1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.demo2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.demo3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.norvig.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sample.executor&quot;: &quot;Run&quot;,
-    &quot;Python.simpledatasetloader.executor&quot;: &quot;Run&quot;,
-    &quot;Python.simplepreprocessor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sudoku_solver.executor&quot;: &quot;Run&quot;,
-    &quot;Python.train_char74K.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.demo1.executor": "Run",
+    "Python.demo2.executor": "Run",
+    "Python.demo3.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.norvig.executor": "Run",
+    "Python.sample.executor": "Run",
+    "Python.simpledatasetloader.executor": "Run",
+    "Python.simplepreprocessor.executor": "Run",
+    "Python.sudoku_solver.executor": "Run",
+    "Python.train_char74K.executor": "Run",
+    "Python.x.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Computer-vision\project0-sample" />
