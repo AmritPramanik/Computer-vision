@@ -19,8 +19,8 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
 
 model = YOLO("../Yolo-Weights/yolov8n.pt")
 cap = cv2.VideoCapture(0)
-cap.set(3,1280)
-cap.set(4,720)
+cap.set(3,980)
+cap.set(4,550)
 
 while True:
     ret,frame = cap.read()
