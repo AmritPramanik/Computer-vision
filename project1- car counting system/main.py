@@ -19,16 +19,21 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
 
 model = YOLO("../Yolo-Weights/yolov8l.pt").to('cuda')
 cap = cv2.VideoCapture("../videos/cars.mp4")
-mask = cv2.imread('masking.jpg')
+mask = cv2.imread('img/masking.jpg')
 
 # tracking
 tracker = Sort(max_age=20,min_hits=3,iou_threshold=0.3)
-
-limits = [280,350,673,350]
+totalCount = []
+limits = [160,380,690,380]
 
 while True:
     ret,frame = cap.read()
     imgRegion = cv2.bitwise_and(frame,mask)
+
+    imageGraphics = cv2.imread('img/graphics.png',cv2.IMREAD_UNCHANGED)
+    imageGraphics = cv2.resize(imageGraphics,(imageGraphics.shape[1]//2,imageGraphics.shape[0]//2))
+    frame = cvzone.overlayPNG(frame,imageGraphics,(0,0))
+
     results = model(imgRegion)
     annotated_frame = results[0].plot()
 
@@ -55,10 +60,11 @@ while True:
                 detections = np.vstack((detections,concurrentArray))
 
     resultsTracker = tracker.update(detections)
-    cv2.line(frame,(limits[0],limits[1]),(limits[2],limits[3]),(0,0,255),5)
+    cv2.line(frame,(limits[0],limits[1]),(limits[2],limits[3]),(0,0,255),3)
 
     for result in resultsTracker:
         x1, y1, x2, y2, id = result
+        print(id)
         x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
         w, h = x2 - x1, y2 - y1
 
@@ -66,9 +72,21 @@ while True:
         # cvzone.putTextRect(frame, f'{int(id)}', (max(0, x1), max(35, y1 - 20)), scale=1, thickness=2,
         #                    offset=5)
 
+        cx,cy = x1+w//2 , y1+h//2
+        cv2.circle(frame,(cx,cy),5,(0,255,0),-1)
 
+        if limits[0]< cx <limits[2] and  limits[1] <= cy:
+            print(id)
+            if totalCount.count(id) == 0:
+                totalCount.append(id)
+                cv2.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (0, 255,0), 3)
+
+    cvzone.putTextRect(frame, f'{len(totalCount)}', (4),offset=0)
+
+    cv2.namedWindow('YOLO-V8', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('YOLO-V8', 940, 600)
     cv2.imshow('YOLO-V8',frame)
-    if cv2.waitKey(0) == ord('x'):
+    if cv2.waitKey(1) == ord('x'):
         break
 
 cv2.destroyAllWindows()

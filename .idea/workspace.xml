@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9b3de519-077c-40ba-9cb5-39e95d31a5a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1- car counting system/graphics.png" beforeDir="false" afterPath="$PROJECT_DIR$/project1- car counting system/img/graphics.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project1- car counting system/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project1- car counting system/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1- car counting system/masking.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project1- car counting system/img/masking.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +57,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Computer-vision\project1- car counting system\img" />
       <recent name="D:\Computer-vision\project1- car counting system" />
       <recent name="D:\Computer-vision\project0-sample" />
       <recent name="D:\Computer-vision\project 0 - sample " />
