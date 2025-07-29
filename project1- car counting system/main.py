@@ -17,7 +17,7 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
               "teddy bear", "hair drier", "toothbrush"
               ]
 
-model = YOLO("../Yolo-Weights/yolov8l.pt").to('cuda')
+model = YOLO("../Yolo-Weights/yolov8m.pt").to('cuda')
 cap = cv2.VideoCapture("../videos/cars.mp4")
 mask = cv2.imread('masking.jpg')
 
@@ -58,7 +58,7 @@ while True:
         x1, y1, x2, y2, id = result
 
     cv2.imshow('YOLO-V8',frame)
-    if cv2.waitKey(0) == ord('x'):
+    if cv2.waitKey(1) == ord('x'):
         break
 
 cv2.destroyAllWindows()
