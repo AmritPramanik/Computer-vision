@@ -31,7 +31,7 @@ while True:
     imgRegion = cv2.bitwise_and(frame,mask)
 
     imageGraphics = cv2.imread('img/graphics.png',cv2.IMREAD_UNCHANGED)
-    imageGraphics = cv2.resize(imageGraphics,(imageGraphics.shape[1]//2,imageGraphics.shape[0]//2))
+    # imageGraphics = cv2.resize(imageGraphics,(imageGraphics.shape[1]//2,imageGraphics.shape[0]//2))
     frame = cvzone.overlayPNG(frame,imageGraphics,(0,0))
 
     results = model(imgRegion)
@@ -81,8 +81,7 @@ while True:
                 totalCount.append(id)
                 cv2.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (0, 255,0), 3)
 
-    cvzone.putTextRect(frame, f'{len(totalCount)}', (4),offset=0)
-
+    cv2.putText(frame,  str(len(totalCount)), (235,100),cv2.FONT_HERSHEY_PLAIN, 4.5, (255,0,0), 5)
     cv2.namedWindow('YOLO-V8', cv2.WINDOW_NORMAL)
     cv2.resizeWindow('YOLO-V8', 940, 600)
     cv2.imshow('YOLO-V8',frame)
